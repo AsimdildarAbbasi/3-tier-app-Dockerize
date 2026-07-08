@@ -136,7 +136,7 @@ function App() {
   return (
     <div className="todo-app">
       <header className="todo-header">
-        <h1>Task Manager</h1>
+        <h1>Task Manager by Asim Abbasi</h1>
         <div className="status-indicator">
           <span className={`status-dot ${dbStatus}`}></span>
           <span className="status-text">

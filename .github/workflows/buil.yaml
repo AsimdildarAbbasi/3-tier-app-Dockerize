@@ -26,15 +26,15 @@ jobs:
 
       - name: Install Frontend Dependencies
         working-directory: ./frontend
-        run: npm ci
+        run: npm install
 
       - name: Build Frontend
-        working-directory: ./frontend
+        working-directory: ./frontend/@latest
         run: npm run build
 
       - name: Install Backend Dependencies
         working-directory: ./backend
-        run: npm ci
+        run: npm install
 
       - name: Check Docker Version
         run: docker --version

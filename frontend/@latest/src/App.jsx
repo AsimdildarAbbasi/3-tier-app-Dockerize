@@ -10,8 +10,8 @@ function App() {
   const [error, setError] = useState(null);
   const [dbStatus, setDbStatus] = useState('connecting');
 
-  const API_URL = 'http://localhost:5000/api/todos';
-  const TEST_URL = 'http://localhost:5000/db-test';
+const API_URL = "http://13.235.94.22:5000/api/todos";
+const TEST_URL = "http://13.235.94.22:5000/db-test";
 
   // Function to verify API & DB connection
   const checkConnection = async () => {

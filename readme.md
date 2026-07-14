@@ -15,28 +15,6 @@ The repository includes a production-ready, fully automated **CI/CD Pipeline** b
 
 The application is orchestrated locally using Docker Compose networks to isolate container communication, exposing only the necessary ports to the outside world.
 
-```mermaid
-graph TD
-    Client([🌐 Client Browser]) -->|Access Frontend: Port 3000| FE[🐳 React Container]
-    Client -->|API Requests: Port 5000| BE[🐳 Express API Container]
-    FE -->|XHR/Fetch Calls| BE
-    BE -->|Query / Insert: Port 5432| DB[(🐳 PostgreSQL Database)]
-    
-    subgraph Docker Network: todo-network
-        FE
-        BE
-        DB
-    end
-
-    classDef container fill:#2496ED,stroke:#fff,stroke-width:2px,color:#fff;
-    classDef database fill:#336791,stroke:#fff,stroke-width:2px,color:#fff;
-    classDef client fill:#4CAF50,stroke:#fff,stroke-width:2px,color:#fff;
-    class FE,BE container;
-    class DB database;
-    class Client client;
-```
-
----
 
 ## 🛠️ CI/CD GitOps Pipeline Flow
 
